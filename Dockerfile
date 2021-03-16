@@ -1,9 +1,13 @@
-FROM python:3-alpine
+FROM python:3.9.0-slim-buster
 
-# RUN apk add --update bash curl git && rm -rf /var/cache/apk/*
-
-COPY . /usr/src/app
 WORKDIR /usr/src/app
 
+COPY requirements.txt .
+
 RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
 CMD ["python", "app.py"]
