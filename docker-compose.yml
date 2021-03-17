@@ -3,6 +3,7 @@ version: "3.9"
 web:
   build: .
   dockerfile: Dockerfile
+  image: infra/flaskweb
   links:
     - redis
   ports:
