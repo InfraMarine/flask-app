@@ -1,8 +1,8 @@
 # For local development
+version: "3.9"
 web:
   build: .
   dockerfile: Dockerfile
-  image: flaskappweb
   links:
     - redis
   ports:
