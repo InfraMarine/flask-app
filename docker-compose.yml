@@ -1,12 +1,16 @@
 # For local development
 version: "2.2"
-web:
-  build: .
-  dockerfile: Dockerfile
-  image: infra/flaskweb
-  links:
-    - redis
-  ports:
-    - "5000:5000"
-redis:
-  image: redis
+
+services:
+
+  web:
+    build: .
+    dockerfile: Dockerfile
+    image: infra/flaskweb
+    links:
+      - redis
+    ports:
+      - "5000:5000"
+      
+  redis:
+    image: redis
