@@ -12,6 +12,6 @@ EXPOSE 5000
 
 RUN pip install pytest pytest-cov pytest-flask
 
-RUN python -m pytest --cov=web/ tests
+RUN python -m pytest --cov=web/ --cov-report xml:cov.xml tests
 
 CMD ["python", "app.py"]
