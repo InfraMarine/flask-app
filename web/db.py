@@ -1,3 +1,3 @@
 from redis import Redis, RedisError
 
-redis = Redis(host="redis", db=0)
+redis = Redis(host="localhost", db=0)
